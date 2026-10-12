@@ -10,19 +10,36 @@ public class AccessDemo {
 
     public static void main(String[] args) {
         // TODO: 1 - Create an instance of AccessModifiers.
+<<<<<<< HEAD
+=======
+        AccessModifiers accessModifiers=new AccessModifiers();
+>>>>>>> exercises
 
         System.out.println("=== Calling Public Method ===");
         // TODO: 2 - Call the publicGreeting() method on your instance and print the result.
         //  This works because public methods are accessible from anywhere.
+<<<<<<< HEAD
+=======
+        System.out.println(accessModifiers.publicGreeting());
+>>>>>>> exercises
 
         System.out.println("\n=== Calling Package-Private Method ===");
         // TODO: 3 - Call the packageGreeting() method on your instance and print the result.
         //  This works because AccessDemo is in the SAME package as AccessModifiers.
+<<<<<<< HEAD
+=======
+        System.out.println(accessModifiers.packageGreeting());
+>>>>>>> exercises
 
         System.out.println("\n=== Accessing Private Field Through Getter ===");
         // TODO: 4 - Use setSecret() to set a value, then use getSecret() to read it back.
         //  Print the result. This demonstrates proper encapsulation:
         //  we access the private field only through public getter/setter methods.
+<<<<<<< HEAD
+=======
+        accessModifiers.setSecret("Papa Macoura SAMBA");
+        System.out.println(accessModifiers.getSecret());
+>>>>>>> exercises
 
         System.out.println("\n=== Why Direct Private Access Won't Work ===");
         // TODO: 5 - Write a comment explaining why the following line would NOT compile:
@@ -30,5 +47,12 @@ public class AccessDemo {
         //  Then leave the line commented out, preceded by your explanation.
         //  Hint: think about what 'private' means for field visibility outside the class.
 
+<<<<<<< HEAD
+=======
+        //  accessModifiers.secret won't compile because secret is private and is accessible only inside
+        //  AccessModifiers class
+        //  accessModifiers.secret = "trying direct access";
+
+>>>>>>> exercises
     }
 }

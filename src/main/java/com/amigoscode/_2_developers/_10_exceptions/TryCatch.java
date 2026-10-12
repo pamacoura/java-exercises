@@ -23,7 +23,17 @@ public class TryCatch {
         //  try to return arr[index].
         //  catch ArrayIndexOutOfBoundsException, print "Index out of bounds: " + index,
         //  and return -1.
+<<<<<<< HEAD
         return 0;
+=======
+        try {
+            return arr[index];
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Index out of bounds: " + index);
+            return -1;
+        }
+
+>>>>>>> exercises
     }
 
     /**
@@ -36,7 +46,17 @@ public class TryCatch {
     public static int safeParseInt(String text) {
         // TODO: 2 - Wrap Integer.parseInt(text) in a try-catch block.
         //  catch NumberFormatException, print "Cannot parse: " + text, and return 0.
+<<<<<<< HEAD
         return 0;
+=======
+        try {
+            return Integer.parseInt(text);
+        }catch (NumberFormatException e){
+            System.out.println("Cannot parse: " + text);
+            return 0;
+        }
+
+>>>>>>> exercises
     }
 
     /**
@@ -54,7 +74,21 @@ public class TryCatch {
         //  finally: print "Division operation completed."
         //  Return the result. (You'll need a local variable since return in try
         //  executes after finally.)
+<<<<<<< HEAD
         return 0;
+=======
+        var result=0;
+        try {
+            result= a/b;
+        }catch (ArithmeticException e){
+            System.out.println("Cannot divide by zero!");
+            return result;
+        }finally {
+            System.out.println("Division operation completed.");
+            return result;
+        }
+
+>>>>>>> exercises
     }
 
     /**
@@ -72,7 +106,17 @@ public class TryCatch {
         //  Catch both ArrayIndexOutOfBoundsException and NumberFormatException
         //  in a single catch block using: catch (ExType1 | ExType2 e)
         //  Print "Error: " + e.getMessage() and return -1.
+<<<<<<< HEAD
         return 0;
+=======
+        try {
+            return Integer.parseInt(data[index]);
+        }catch (ArrayIndexOutOfBoundsException | NumberFormatException e){
+            System.out.println("Error: " + e.getMessage());
+            return -1;
+        }
+
+>>>>>>> exercises
     }
 
     /**
@@ -89,7 +133,15 @@ public class TryCatch {
         //  }
         //  catch any exception and return -1.
         //  The Scanner will be automatically closed after the try block.
+<<<<<<< HEAD
         return 0;
+=======
+        try(Scanner scanner = new Scanner(input)){
+            return scanner.nextInt();
+        }catch (Exception e){
+            return -1;
+        }
+>>>>>>> exercises
     }
 
     /**
@@ -103,6 +155,12 @@ public class TryCatch {
         // TODO: 6 - If age < 0, throw a new IllegalArgumentException
         //  with the message "Age cannot be negative: " + age.
         //  Otherwise, return age.
+<<<<<<< HEAD
+=======
+        if(age<0){
+            throw new IllegalArgumentException("Age cannot be negative: " + age);
+        }
+>>>>>>> exercises
         return age;
     }
 
@@ -120,6 +178,10 @@ public class TryCatch {
         //  Then call validateAge() with the parsed int.
         //  Do NOT catch any exceptions here — let them propagate to the caller.
         //  This demonstrates that exceptions travel up the call stack.
+<<<<<<< HEAD
+=======
+        validateAge(Integer.parseInt(value));
+>>>>>>> exercises
         return 0;
     }
 

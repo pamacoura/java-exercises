@@ -1,7 +1,11 @@
 # Amigoscode Java Exercises
 
 Guided hands-on exercises for the Java learning path on
+<<<<<<< HEAD
 [Amigoscode Academy](https://skool.com/amigoscode-academy).
+=======
+[Amigoscode Academy](https://skool.com/amigoscode).
+>>>>>>> exercises
 
 ## Tech Stack
 
