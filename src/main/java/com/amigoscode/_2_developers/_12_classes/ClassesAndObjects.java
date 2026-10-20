@@ -13,6 +13,39 @@ public class ClassesAndObjects {
     // TODO: 1 - Create a static inner class called Person with:
     //  - A private String field 'name'
     //  - A private int field 'age'
+    static class Person{
+        private String name;
+        private int age;
+
+        public Person(String name, int age){
+            this.name=name;
+            this.age=age;
+        }
+
+        public Person(){
+            this("Unknown",0);
+        }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (o == null || getClass() != o.getClass()) return false;
+            Person person = (Person) o;
+            return age == person.age && Objects.equals(name, person.name);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name, age);
+        }
+    }
 
 
     // TODO: 2 - Add a constructor to Person that takes String name and int age,
@@ -47,6 +80,14 @@ public class ClassesAndObjects {
         //  Test equals(): compare person1 with person3 (should be true),
         //  and person1 with person2 (should be false).
         //  Print the comparison results.
+        Person p1= new Person("Alice",30);
+        Person p2= new Person();
+        Person p3= new Person("Alice",30);
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+        System.out.println("p1.equals(p3): "+ p1.equals(p3));
+        System.out.println("p1.equals(p2): "+ p1.equals(p2));
 
 
         // TODO: 7 - Demonstrate constructor chaining with this():
