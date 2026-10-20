@@ -42,13 +42,28 @@ public class EnumExercises {
         //  For each season, print a message like "Spring: Flowers bloom"
         //  using the getDescription() method.
         //  Test with Season.SUMMER.
+        Season season = Season.SUMMER;
 
+        switch (season) {
+            case SPRING -> System.out.println("Spring: " + season.getDescription());
+            case SUMMER -> System.out.println("Summer: " + season.getDescription());
+            case AUTUMN -> System.out.println("Autumn: " + season.getDescription());
+            case WINTER -> System.out.println("Winter: " + season.getDescription());
+        }
 
         System.out.println("\n=== Iterate Over Enum Values ===");
         // TODO: 6 - Use Season.values() to get an array of all Season constants.
         //  Loop through them and print each one with its description and ordinal.
         //  Example output: "0: SPRING - Flowers bloom"
         //  Also iterate over Priority.values() and print each with its level.
+        System.out.println("Iterate over Season Enum");
+        for(Season s:Season.values()){
+            System.out.println(s.ordinal()+": "+s+" - "+s.getDescription());
+        }
+        System.out.println("Iterate over Priority Enum");
+        for(Priority p:Priority.values()){
+            System.out.println(p+"("+p.getLevel()+")");
+        }
 
     }
 }
